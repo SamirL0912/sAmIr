@@ -1,8 +1,7 @@
-part of 'home_bloc.dart';
+abstract class HomeEvent {}
 
-sealed class HomeEvent extends Equatable {
-  const HomeEvent();
+class EnviarMensajeEvent extends HomeEvent {
+  final String mensaje;
 
-  @override
-  List<Object> get props => [];
+  EnviarMensajeEvent(this.mensaje);
 }
